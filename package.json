@@ -4,6 +4,6 @@
     "socket.io": "^4.7.1"
   }
   "scripts": {
-    "server": "{{ executes BEFORE the `compress` script }}",
+    "start": "{{ executes server script }}",
   }
 }
