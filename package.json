@@ -4,6 +4,6 @@
     "socket.io": "^4.7.1"
   },
   "scripts": {
-    "start": "{{ executes server script }}",
+    "start": "node start.js",
   }
 }
