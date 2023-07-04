@@ -11,10 +11,19 @@ app.get('/', (req, res) => {
 
 io.on('connection', (socket) => {
   console.log('a user connected');
+
+
+  // Ping calculation
+  socket.on("ping", (cb) => {
+    if (typeof cb === "function")
+      cb();
+  });
+  
   socket.on('transform', (data) => {
       io.emit('transform', data, false)
       console.log(JSON.stringify(data))
   })
+
 });
 
 
